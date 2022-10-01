@@ -9,8 +9,30 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <div class="parallelogram-outline">
+  <!-- <div class="parallelogram-outline">
     <div class="parallelogram"></div>
+  </div> -->
+  <div class="rect-mask">
+    <div class="inner">
+      mask test<br>mask test<br>mask test<br>mask test<br>mask test<br>mask test<br>mask test<br>mask test<br>mask test<br>mask test
+    </div>
   </div>
+
+  <button class="btn-on-off">click</button>
+  <script>
+    const BTN = document.querySelector('.btn-on-off');
+    const GRA_EL = document.querySelector('.rect-mask');
+    if (BTN) btnEvent(BTN);
+
+    function btnEvent(_btnEl) {
+      _btnEl.addEventListener('click', () => {
+        if (GRA_EL) graToggleEvent(GRA_EL);
+      });
+    }
+
+    function graToggleEvent(_graEl) {
+      _graEl.classList.toggle('on');
+    }
+  </script>
 </body>
 </html>
