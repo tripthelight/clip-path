@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  --indent: 15%;
+  --arrow-shape: polygon(
+    0 0,
+    0 100%,
+    100% 100%,
+    100% 0
+  );
+}
+
+
+.parallelogram-outline {
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
+  box-sizing: border-box;
+}
+.parallelogram-outline.on {
+  display: inline-block;
+  background: linear-gradient(to bottom right, blue, pink);
+  padding: 10px;
+  border-radius: 10px;
+  clip-path: var(--arrow-shape);
+}
+
+.parallelogram {
+  position: relative;
+  font-family: sans-serif;
+  background-color: white;
+  padding: 0px;
+  border-radius: 10px;
+  clip-path: var(--arrow-shape);
+  width: 100%;
+  height: 100%;
+}
