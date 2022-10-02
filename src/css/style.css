@@ -3,56 +3,22 @@
   padding: 0;
   list-style-type: none;
   box-sizing: border-box;
+  font-size: 16px;
 }
-
-:root {
-  --indent: 15%;
-  --arrow-shape: polygon(
-    0 0,
-    0 100%,
-    100% 100%,
-    100% 0
-  );
-}
-
-/* 
-.parallelogram-outline {
-  width: 300px;
-  height: 300px;
-  background-color: aquamarine;
-  box-sizing: border-box;
-}
-.parallelogram-outline.on {
-  display: inline-block;
-  background: linear-gradient(to bottom right, blue, pink);
-  padding: 10px;
-  border-radius: 10px;
-  clip-path: var(--arrow-shape);
-}
-
-.parallelogram {
-  position: relative;
-  font-family: sans-serif;
-  background-color: white;
-  padding: 0px;
-  border-radius: 10px;
-  clip-path: var(--arrow-shape);
-  width: 100%;
-  height: 100%;
-} */
 
 .rect-mask {
   position: relative;
   width: 100%;
   background-color:#FFF;
-  border-radius: 50px;
+  /* body > font-size: 16px */
+  border-radius: 1.25rem;
   padding: 30px;
   z-index: 1;
   box-sizing: border-box;
+  transition: all .2s ease-in-out;
 }
-.rect-mask.on {
-  border: 0 none;
-}
+
+/* square round line */
 .rect-mask.on::after {
   content: '';
   display: block;
@@ -61,7 +27,9 @@
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50px;
+  /* body > font-size: 16px */
+  border-radius: 1.25rem;
+  /* radius thickness: border-width */
   border: 10px solid transparent;
   background: linear-gradient(135deg,rgb(108, 55, 255),rgb(0, 167, 42)) border-box;
   -webkit-mask:
@@ -76,6 +44,7 @@
   z-index: 2;
 }
 
+/* button: on || off */
 .btn-on-off {
   background-color: #DDD;
   border: 0 none;
